@@ -47,3 +47,52 @@ Give a :star: if you like this project.
 
 ## License :memo:
 This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed
+## Clone Project
+- STEP 1:
+  - git clone `git@github.com:direakanbi/blog-app.git`
+- STEP 2:
+  - `cd blog-app` in your terminal
+- STEP 3:
+  - run `rails server` or `rails s` in your terminal
+- STEP 4:
+  - visit `localhost:3000` on your browser
+> Yeyyy you have the app running **Congratulations** 😅🎉
+
+## Run test suits
+  > rspec
+
+## Technologies Used
+* Language (Ruby on Rails)
+* PostgreSQL
+
+## Installation
+* Ruby
+* Rails
+* Postgresql
+
+## 👤 Author 
+Dire Akanbi :student: 
+- GitHub: [@direakanbi](https://github.com/direakanbi)
+- Twitter: [@DireAkanbi](https://twitter.com/DireAkanbi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/dire-akanbi/)
+
+## 👤 Author2
+Jerry Owusu
+
+- GitHub: [@jerryowusu](https://github.com/jerryowusu)
+- Twitter: [@JerryOwusu](https://twitter.com/JerryOwusu)
+- LinkedIn: [Jerry Owusu](https://linkedin.com/in/Jerry-Owusu-5430065b)
+
+## Contributing :handshake:
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+Give a 	:star: if you like this project.
+
+## Acknowledgments
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
+
+## License :memo:
+This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed
