@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  resources :foods, only: [:index, :new, :create, :destroy]
-  resources :recipes, only: [:index, :show, :new, :create, :destroy] do
+  resources :foods, only: %i[index new create destroy]
+  resources :recipes, only: %i[index show new create destroy] do
     resources :recipe_foods, only: %i[new create edit update destroy]
   end
 
   get '/public_recipes', to: 'recipes#public_recipes'
-  root to: "foods#index"
+  root to: 'foods#index'
 end
