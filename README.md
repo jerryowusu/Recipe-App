@@ -1,24 +1,98 @@
-# README
+# Recipe-App
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Clone Project
+- STEP 1:
+  - git clone `git@github.com:oluyaratosin123/Recipe-App-II.git`
+- STEP 2:
+  - `cd Recipe-App-II` in your terminal
+- STEP 3:
+  - run `rails server` or `rails s` in your terminal
+- STEP 4:
+  - visit `localhost:3000` on your browser
+> Yeyyy you have the app running **Congratulations** 😅🎉
 
-Things you may want to cover:
+## Run test suits
+  > rspec spec
 
-* Ruby version
+## Technologies Used
+* Language (Ruby on Rails)
+* PostgreSQL
 
-* System dependencies
+## Installation
+* Ruby
+* Rails
+* Postgresql
 
-* Configuration
+## 👤 Author 
+Edward Yara  
+- GitHub: [@oluyaratosin123](https://github.com/oluyaratosin123)
+- Twitter: [@TOluyara](https://twitter.com/TOluyara)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/edward-oluyara/)
 
-* Database creation
+Emmanuel Jolugbo
+- GitHub: [@Thermiee](https://github.com/Thermiee)
+- LinkedIn: [@emmanuel-jolugbo](https://www.linkedin.com/in/emmanuel-jolugbo/)
 
-* Database initialization
+## Contributing :handshake:
+Contributions, issues, and feature requests are welcome!
 
-* How to run the test suite
+## Show your support
+Give a :star: if you like this project.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Acknowledgments
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
 
-* Deployment instructions
+## License :memo:
+This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed
+## Clone Project
+- STEP 1:
+  - git clone `git@github.com:direakanbi/blog-app.git`
+- STEP 2:
+  - `cd blog-app` in your terminal
+- STEP 3:
+  - run `rails server` or `rails s` in your terminal
+- STEP 4:
+  - visit `localhost:3000` on your browser
+> Yeyyy you have the app running **Congratulations** 😅🎉
 
-* ...
+## Run test suits
+  > rspec
+
+## Technologies Used
+* Language (Ruby on Rails)
+* PostgreSQL
+
+## Installation
+* Ruby
+* Rails
+* Postgresql
+
+## 👤 Author 
+Dire Akanbi :student: 
+- GitHub: [@direakanbi](https://github.com/direakanbi)
+- Twitter: [@DireAkanbi](https://twitter.com/DireAkanbi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/dire-akanbi/)
+
+## 👤 Author2
+Jerry Owusu
+
+- GitHub: [@jerryowusu](https://github.com/jerryowusu)
+- Twitter: [@JerryOwusu](https://twitter.com/JerryOwusu)
+- LinkedIn: [Jerry Owusu](https://linkedin.com/in/Jerry-Owusu-5430065b)
+
+## Contributing :handshake:
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+Give a 	:star: if you like this project.
+
+## Acknowledgments
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
+
+## License :memo:
+This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed

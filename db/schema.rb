@@ -1,3 +1,4 @@
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -25,6 +26,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_22_121313) do
     t.index ["user_id"], name: "index_foods_on_user_id"
   end
 
+  create_table "recipe_foods", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "recipe_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_recipe_foods_on_recipe_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
+    t.integer "preparation_time"
+    t.integer "cooking_time"
+    t.text "description"
+    t.boolean "public"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -39,4 +58,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_22_121313) do
   end
 
   add_foreign_key "foods", "users"
+  add_foreign_key "recipe_foods", "recipes"
 end
