@@ -6,7 +6,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show; end
+  def show
+    sign_out :user
+    redirect_to
+  end
 
   def new
     redirect_to user_session_path
