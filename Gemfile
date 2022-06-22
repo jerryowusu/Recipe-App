@@ -31,6 +31,8 @@ gem 'tzinfo-data'
 
 gem 'rswag'
 
+gem 'temple'
+
 gem 'bootsnap', require: false
 
 gem 'rubocop', '>= 1.0', '< 2.0'
