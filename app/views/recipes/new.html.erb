@@ -1,40 +1,52 @@
-<div class="container d-flex flex-column align-items-center">
-  <h2>Add new recipe:</h2>
-  <%= turbo_frame_tag @recipe do %>
-    <%= form_with model: @recipe do |form| %>
-      <% if @recipe.errors.any? %>
-        <div class="alert alert-danger mt-4" role="alert">
-          <% @recipe.errors.full_messages.each do |message| %>
-            <div><%= message %></div>
+<div class="container contact">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="contact-info">
+				<img class = "img-thumbnail" src="https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVjaXBlc3xlbnwwfHwwfHw%3D&w=1000&q=80" alt="image" />
+				<h2>Add new Recipe</h2>
+				<h4>You shoud love to try it!</h4>
+			</div>
+		</div>
+		<div class="col-md-9">
+         <%= form_with model: @recipe do |f| %>
+			<div class="contact-form">
+				<div class="form-group">
+				  <%= f.label :name, class: "control-label col-sm-2" %> 
+				<div class="col-sm-10">          
+				  <%= f.text_field :name, class: "form-control", placeholder: "Enter Name"%>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <%= f.label :cooking_time,class: "control-label col-sm-2" %>
+                <div class="col-sm-10">          
+				  <%= f.text_field :cooking_time, class: "form-control"%>
+				  </div>
+				</div>
+				<div class="form-group">
+			      <%= f.label :preparation_time, class: "control-label col-sm-2" %>
+				<div class="col-sm-10">
+				  <%= f.text_field :preparation_time, class: "form-control"%>
+				</div>
+				</div>
+                <div>
+                <%= f.check_box :public%>
+                <%= f.label :public %>
+                </div>
+				<div class="form-group">
+				  <%= f.label :description, class: "control-label col-sm-2" %>
+				  <div class="col-sm-10">
+					<%= f.text_area :description, class: "form-control", rows: "5" %>
+				  </div>
+				</div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-dark">Add Recipe</button>
+				  </div>
           <% end %>
-        </div>
-      <% end %>
-      <div class="form-group mb-3">
-        <%= form.label :name %>
-        <%= form.text_field :name, class: "form-control" , required: true %>
-      </div>
-
-      <div class="form-group mb-3">
-        <%= form.label :description %>
-        <%= form.text_area :description, class: "form-control", required: true %>
-      </div>
-
-      <div class="form-group mb-3">
-        <%= form.label :cooking_time %>
-        <%= form.number_field :cooking_time, step: 1, class: "form-control", required: true %>
-      </div>
-
-      <div class="form-group mb-3">
-        <%= form.label :preparation_time %>
-        <%= form.number_field :preparation_time, step: 1, class: "form-control", required: true %>
-      </div>
-
-      <div class="form-check form-switch mb-3">
-        <%= form.label :public, class: "form-check-label" %>
-        <%= form.check_box :public, class: "form-check-input" %>
-      </div>
-
-      <%= form.submit "Create", data: { turbo: false }, class: "btn btn-primary" %>
-    <% end %>
-  <% end %>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+

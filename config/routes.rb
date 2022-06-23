@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   get 'shopping/list'
-  get "/general_shopping_list", to: 'shopping#list'
+  get "/general_shopping_list", to: 'shoppings#list'
   resources :publics, only: %i[index]
   resources :recipes, only: %i[index new create destroy show]
   resources :foods, only: %i[index new create destroy show]
