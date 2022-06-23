@@ -1,9 +1,15 @@
-<h1>New recipe food</h1>
+<div class="container d-flex flex-column align-items-center">
+  
+    <h2>Add new food to recipe:</h2>
+    <%= form_with url: recipe_recipe_foods_path do |form| %>
+      <%= select("food", "food_id", Food.all.collect { |p| [ p.name, p.id ] }, { prompt: 'Select Food' }) %>
 
-<%= render "form", recipe_food: @recipe_food %>
+      <div class="form-group mb-3">
+        <%= form.label :quantity %> <br>
+        <%= form.number_field :quantity, class: "form-control" , required: true %>
+      </div>
 
-<br>
-
-<div>
-  <%= link_to "Back to recipe foods", recipe_foods_path %>
+      <%= form.submit "Create", data: { turbo: false }, class: "btn btn-primary" %>
+    
+  <% end %>
 </div>
