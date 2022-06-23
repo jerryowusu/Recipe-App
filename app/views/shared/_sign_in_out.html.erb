@@ -1,0 +1,11 @@
+
+
+<% if user_signed_in? %>
+  <%= form_with(model: current_user, url: destroy_user_session_path, method: :delete) do |f| %>
+    <%= f.submit 'Log out', class: 'cursor-pointer' %>
+  <% end %>
+<% else %>
+    <li class="nav-item">
+          <%= link_to "Log In", new_user_session_path, class:"nav-link" %>
+        </li>
+<% end %>
