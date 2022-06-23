@@ -23,7 +23,7 @@
       data-bs-target="#staticBackdrop">
         Generate shopping list
     </button>
-    <%= link_to "Add ingredient", new_recipe_recipe_food_path(recipe_id: @recipe.id), class: "btn btn-primary m-1" if @recipe.user == current_user %>
+    <%= link_to "Add ingredient", new_recipe_food_path(recipe_id: @recipe.id), class: "btn btn-primary m-1" if @recipe.user == current_user %>
   </div>
   <% else %>
     <h1>You are not authorized to see this recipe.</h1>
@@ -44,8 +44,8 @@
             <div class="col"><%= recipe_food.quantity %></div>
             <div class="col">$<%= total_price(recipe_food.id) %></div>
             <div class="col">
-              <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn btn-dark" %>
-              <%= link_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+              <%= link_to "Modify", edit_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn btn-dark" %>
+              <%= link_to "Remove", recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
             </div>
           </li>
         <% end %>
@@ -53,7 +53,7 @@
   <% end %>
 </div>
 
-<div class="modal fade"
+<%# <div class="modal fade"
   id="staticBackdrop"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
@@ -68,16 +68,16 @@
       </div>
       <div class="modal-body">
         <h6>Choose an inventory to use</h6>
-        <%= form_with url: shopping_lists_path, method: :get do |form| %>
-          <%= select("inventory", "inventory_id", Inventory.all.collect { |p| [ p.name, p.id ] }, { prompt: 'Select Inventory' }) %>
-          <div class="field form-group mb-3">
-            <%= form.number_field :recipe_id, class: "form-control", value: @recipe.id, hidden: true %>
-          </div>
-      <div class="modal-footer">
+        <%= form_with url: shopping_list_path, method: :get do |form| %>
+          <%# <%= select("inventory", "inventory_id", Inventory.all.collect { |p| [ p.name, p.id ] }, { prompt: 'Select Inventory' }) %>
+          <%# <div class="field form-group mb-3"> %>
+            <%# <%= form.number_field :recipe_id, class: "form-control", value: @recipe.id, hidden: true %> 
+          <%# </div> %>
+      <%# <div class="modal-footer">
         <%= form.submit "Generate", data: { turbo: false }, class: "btn btn-primary" %>
-        <% end %>
-      </div>
+        <%# <% end %> 
+      <%# </div>
       </div>
     </div>
   </div>
-</div>
+</div> %> 
