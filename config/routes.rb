@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'recipe_foods/new'
-  get 'recipe_foods/create'
-  get 'recipe_foods/edit'
-  get '/public_recipes', to: 'recipes#public_recipes'
-  get 'foods/index'
-  get 'foods/new'
-  get 'foods/create'
-  get 'foods/destroy'
+  # get 'recipe_foods/new'
+  # get 'recipe_foods/create'
+  # get 'recipe_foods/edit'
+  # get '/public_recipes', to: 'recipes#public_recipes'
+  # get 'foods/index'
+  # get 'foods/new'
+  # get 'foods/create'
+  # get 'foods/destroy'
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'

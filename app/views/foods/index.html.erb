@@ -1,30 +1,30 @@
-<div>
-  <h1>List of existing food items</h1>
-  <%= link_to("New", new_food_path, class: 'btn-primary') if user_signed_in? %>
-</div>
-
-<% if @foods.blank? %>
-  No food found.
-  <% return %>
-<% end %>
-
-<table>
+<div class="container mt-3 d-flex flex-column align-items-center">
+  <h1>Food List</h1>
+  <% if current_user %>
+  <%= link_to "Add Food", new_food_path, class: "btn btn-primary align-self-end" %>
+    <!-- No layout design, it will look better on navbar -->
+    <% if @foods.empty? %>
+      <div>
+        <h3 class="text-center">No Foods yet.</h3>
+      </div>
+    <% else %>
+      <table class= "table p-3 m-3" >
   <thead>
     <th>Food</th>
-    <th>Unit</th>
-    <th>Price</th>
+    <th>Measurement Unit</th>
+    <th>Unit Price($)</th>
     <th>Action</th>
   </thead>
   <tbody>
     <% @foods.each do |food| %>
     <tr>
       <td><%= food.name %></td>
-      <td><%= food.measurement_unit %></td>
-      <td><%= food.price %></td>
+      <td><%= food.measurement_unit %><span>kg</span></td>
+      <td><span>$</span><%= food.price %></td>
       <td>
         <% if user_signed_in? && food.user == current_user %>
         <%= form_for( food, method: :delete) do |f| %>
-          <%= f.submit 'delete', class: 'cursor-pointer' %>
+          <%= f.submit 'delete', class: 'cursor-pointer bg-danger' %>
         <% end %>
         <% end %>
       </td>
@@ -32,3 +32,6 @@
     <% end %>
   </tbody>
 </table>
+    <% end %>
+  <% end %>
+</div>

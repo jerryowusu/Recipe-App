@@ -4,10 +4,20 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find_by(id: params[:id])
-    @recipe_foods = RecipeFood.where(recipe_id: params[:id]).includes([:food])
+    @recipe = Recipe.find(params[:id])
+    if !@recipe.public && current_user != @recipe.user
+      if user_signed_in?
+        flash[:notice] = 'You are not authorized to access this page'
+        redirect_to recipes_path
+      else
+        flash[:notice] = 'You must be logged in to access this page'
+        redirect_to new_user_session_path
+      end
+    else
+      @recipe
+    end
   end
-
+  
   def new
     if current_user
       @recipe = Recipe.new
