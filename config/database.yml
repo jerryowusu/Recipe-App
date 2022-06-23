@@ -57,8 +57,8 @@ development:
 test:
   <<: *default
   database: recipe_app_development
-  # username: recipe_app
-  # host: localhost
+  username: recipe_app
+  host: localhost
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
