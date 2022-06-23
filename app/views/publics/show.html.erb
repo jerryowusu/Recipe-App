@@ -1,0 +1,11 @@
+
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @public %>
+
+<div>
+  <%= link_to "Edit this public", edit_public_path(@public) %> |
+  <%= link_to "Back to publics", publics_path %>
+  <%= button_to "Destroy this public", @public, method: :delete %>
+</div>
