@@ -6,9 +6,9 @@
             <%= link_to recipe_path(recipe.id), remote: :true do %>
             <h2><%= recipe.name %></h2>
           <% end %>
-          <%if can? :destroy, recipe %>
+          
            <%= button_to "Delete", recipe_path(recipe.id), method: :delete, class: "btn btn-danger"%>
-          <% end %>
+         
         </div>
         <div>
     <h3><%= recipe.description %></h3>
