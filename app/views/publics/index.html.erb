@@ -2,7 +2,7 @@
 <h2 class="text-center m-5 text-secondary">Public Recipes</h2>
 <div>
  <% @recipes.each do |recipe| %>
-   <div class= "recipe2">
+   <div class= "d-flex">
      <%= link_to recipe_path(recipe.id), remote: :true do %>
        <h2><%= recipe.name%><br>by<br><%= recipe.user[:name] %></h2> 
      <% end %>
