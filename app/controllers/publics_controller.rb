@@ -1,23 +1,18 @@
 class PublicsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index]
 
-  # GET /publics or /publics.json
   def index
     @recipes = Recipe.includes(:recipe_foods).where(public: true).order('created_at DESC')
   end
 
-  # GET /publics/1 or /publics/1.json
   def show; end
 
-  # GET /publics/new
   def new
     @public = Public.new
   end
 
-  # GET /publics/1/edit
   def edit; end
 
-  # POST /publics or /publics.json
   def create
     @public = Public.new(public_params)
 
@@ -32,7 +27,6 @@ class PublicsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /publics/1 or /publics/1.json
   def update
     respond_to do |format|
       if @public.update(public_params)
@@ -45,7 +39,6 @@ class PublicsController < ApplicationController
     end
   end
 
-  # DELETE /publics/1 or /publics/1.json
   def destroy
     @public.destroy
 
@@ -57,12 +50,10 @@ class PublicsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_public
     @public = Public.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def public_params
     params.fetch(:public, {})
   end
