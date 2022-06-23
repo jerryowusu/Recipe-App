@@ -7,17 +7,13 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 * Postgresql
 ## Clone Project
 - STEP 1:
-  - git clone `https://github.com/direakanbi/Recipe-App.git`
+  - git clone `https://github.com/jerryowusu/Recipe-App.git`
 - STEP 2:
   - `cd Recipe App` in your terminal
 - STEP 3:
   - run `rails server` or `rails s` in your terminal
 - STEP 4:
   - visit `localhost:3000` on your browser
-> Yeyyy you have the app running **Congratulations** 😅🎉
-
-## Run test suits
-  > rspec
 
 ## Technologies Used
 * Language (Ruby on Rails)
@@ -28,13 +24,7 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 * Rails
 * Postgresql
 
-## 👤 Author 
-Dire Akanbi :student: 
-- GitHub: [@direakanbi](https://github.com/direakanbi)
-- Twitter: [@DireAkanbi](https://twitter.com/DireAkanbi)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/dire-akanbi/)
-
-## 👤 Author2
+## 👤 Author
 Jerry Owusu
 
 - GitHub: [@jerryowusu](https://github.com/jerryowusu)
