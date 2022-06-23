@@ -7,9 +7,9 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 * Postgresql
 ## Clone Project
 - STEP 1:
-  - git clone `git@github.com:direakanbi/blog-app.git`
+  - git clone `https://github.com/direakanbi/Recipe-App.git`
 - STEP 2:
-  - `cd blog-app` in your terminal
+  - `cd Recipe App` in your terminal
 - STEP 3:
   - run `rails server` or `rails s` in your terminal
 - STEP 4:
@@ -53,4 +53,4 @@ Give a 	:star: if you like this project.
 * etc
 
 ## License :memo:
-This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed
+This project is [MIT](LICENCE) licensed
