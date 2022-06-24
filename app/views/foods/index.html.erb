@@ -1,0 +1,16 @@
+<div class="container mt-3 d-flex flex-column align-items-center">
+  <h1>Food List</h1>  
+  <% if current_user %>
+  <%= link_to "Add Food", new_food_path, class: "btn btn-primary align-self-end" %>
+    <!-- No layout design, it will look better on navbar -->
+    <% if @foods.empty? %>
+      <div>
+        <h3 class="text-center">No Foods yet.</h3>
+      </div>
+    <% else %>
+ <%= render 'food' %>
+    <% end %>
+    <% else %>
+    <%= render 'food' %>
+  <% end %>
+</div>
